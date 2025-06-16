@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Generador de Música IA</title>
+</head>
+<body>
+  <h1>Generador de Música IA</h1>
+  <form method="POST">
+    <textarea name="prompt" rows="4" cols="50" placeholder="Ej: melancólica tipo anime opening..."></textarea><br>
+    <button type="submit">Generar</button>
+  </form>
+
+  {% if archivo %}
+    <h3>🎵 Resultado:</h3>
+    <audio controls>
+      <source src="/static/audio/{{ archivo }}" type="audio/midi">
+      Tu navegador no soporta audio.
+    </audio>
+    <p><a href="/static/audio/{{ archivo }}" download>Descargar MIDI</a></p>
+  {% endif %}
+</body>
+</html>
