@@ -1,0 +1,4 @@
+flask
+magenta
+note-seq
+tensorflow
